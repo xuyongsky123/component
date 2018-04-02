@@ -1,0 +1,65 @@
+input[type="checkbox"] {
+	/*同样，首先去除浏览器默认样式*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /*编辑我们自己的样式*/
+    position: relative;
+    background: #fff;
+    border:1px solid #b4b4b4;
+    width:40px;
+    height:24px;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    border-radius:20px;
+    /*增加动画*/
+    -webkit-transition: all ease-in-out 300ms;
+    -moz-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+input[type="checkbox"]:after {
+	content: '';
+    position: absolute;
+    left:-1px;
+    top:-1px;
+    display: block;
+    width:24px;
+    height:24px;
+    background: #fff;
+    color: #fff;
+    text-align: center;
+    line-height:24px;
+    /*增加动画*/
+    -webkit-transition: all ease-in-out 300ms;
+    -moz-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms;
+    -webkit-border-radius: 20px;
+    -moz-border-radius:20px;
+    border-radius:20px;
+    border:1px solid #b4b4b4;
+    box-sizing: border-box;
+}
+input[type="checkbox"]:checked {
+	background: #4cd762;
+    box-sizing: border-box;
+}
+input[type="checkbox"]:checked:after {
+	content: '';
+    left:15px;
+    background: #fff;
+    color: #4cd762;
+    box-sizing: border-box;
+}
+
+/* 禁用样式 */
+input[type="checkbox"]:disabled {
+    background: #999;
+    cursor: no-drop;
+}
+input[type="checkbox"]:disabled:after , input[type="checkbox"]:disabled:checked:after {
+    background: #666;
+}
+
